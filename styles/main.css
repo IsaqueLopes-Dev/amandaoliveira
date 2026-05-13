@@ -69,13 +69,37 @@ summary {
   align-items: center;
   gap: 12px;
   justify-content: center;
-  width: 76px;
-  height: 76px;
-  padding: 9px;
-  border-radius: 50%;
-  background: rgba(245, 241, 238, 0.92);
-  border: 1px solid rgba(255, 255, 255, 0.64);
-  box-shadow: 0 14px 34px rgba(70, 36, 29, 0.18);
+  width: auto;
+  height: auto;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+.brand-text {
+  display: grid;
+  gap: 4px;
+}
+
+.brand-name,
+.brand-role {
+  color: var(--white);
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-shadow: 0 8px 18px rgba(70, 36, 29, 0.3);
+}
+
+.brand-name {
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+}
+
+.brand-role {
+  font-size: 0.58rem;
+  letter-spacing: 0.26em;
+  opacity: 0.82;
 }
 
 .brand-logo {
@@ -83,7 +107,7 @@ summary {
   width: auto;
   height: 58px;
   object-fit: contain;
-  filter: saturate(1.25) contrast(1.22);
+  filter: saturate(1.25) contrast(1.22) drop-shadow(0 8px 18px rgba(70, 36, 29, 0.3));
 }
 
 .nav-links {
@@ -574,7 +598,13 @@ h1 {
 .footer-brand {
   width: fit-content;
   margin-bottom: 18px;
-  background: rgba(245, 241, 238, 0.94);
+  background: transparent;
+}
+
+.footer-brand .brand-name,
+.footer-brand .brand-role {
+  color: var(--brown);
+  text-shadow: none;
 }
 
 .footer h3 {
@@ -706,9 +736,20 @@ h1 {
   }
 
   .brand {
-    width: 60px;
-    height: 60px;
-    padding: 7px;
+    width: auto;
+    height: auto;
+    padding: 0;
+  }
+
+  .brand-name {
+    max-width: 138px;
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+  }
+
+  .brand-role {
+    font-size: 0.52rem;
+    letter-spacing: 0.18em;
   }
 
   .menu-toggle {
@@ -864,6 +905,15 @@ h1 {
 
   .brand-logo {
     height: 42px;
+  }
+
+  .brand-name {
+    max-width: 116px;
+    font-size: 0.62rem;
+  }
+
+  .brand-role {
+    font-size: 0.48rem;
   }
 
   .hero-copy {
